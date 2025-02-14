@@ -1,51 +1,13 @@
-﻿using System;
+﻿int num1, num2;
 
-public class Variables
-{
-    public static void Main(string[] args)
-    {
-        // Declaración de variables
-        int numeroEntero = 0;
-        double numeroDecimal = 0;
-        string texto = "";
-        bool valorBooleano = false;
+Console.Write("Ingresa el primer numero (int): ");
+num1 = int.Parse(Console.ReadLine());
 
+Console.Write("Ingresa el segundo numero (int): ");
+num2 = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Cuál es tu edad:");
-        string inputEntero = Console.ReadLine();
+Console.WriteLine($"Suma: {num1 + num2}");
+Console.WriteLine($"Resta: {num1 - num2}");
+Console.WriteLine($"Multiplicacion: {num1 * num2}");
+Console.WriteLine($"Division: {num1 / num2}");
 
-        while (!int.TryParse(inputEntero, out numeroEntero))
-        {
-            Console.WriteLine("Entrada no válida. Debes introducir un número entero:");
-            inputEntero = Console.ReadLine();
-        }
-
-        Console.WriteLine("Introduce tu altura:");
-        string inputDecimal = Console.ReadLine();
-
-        while (!double.TryParse(inputDecimal, out numeroDecimal))
-        {
-            Console.WriteLine("Entrada no válida. Debes introducir un número decimal:");
-            inputDecimal = Console.ReadLine();
-        }
-
-        Console.WriteLine("Introduce tu nombre:");
-        texto = Console.ReadLine();
-
-      
-        Console.WriteLine("¿Tu informacion es verdadera? (true o false):");
-        string inputBooleano = Console.ReadLine();
-
-        while (!bool.TryParse(inputBooleano, out valorBooleano))
-        {
-            Console.WriteLine("Entrada no válida. Debes introducir 'true' o 'false':");
-            inputBooleano = Console.ReadLine();
-        }
-
-        
-        Console.WriteLine("\nEdad: " + numeroEntero);
-        Console.WriteLine("Altura: " + numeroDecimal);
-        Console.WriteLine("Nombre: " + texto);
-        Console.WriteLine("Informacion: " + valorBooleano);
-    }
-}
